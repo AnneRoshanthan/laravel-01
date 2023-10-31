@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "81a961ba-f6b6-4d13-914f-6f28169904da",
+		"name": "stripe get token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19374305",
+		"_collection_link": "https://crimson-trinity-348353.postman.co/workspace/My-Workspace~811e3331-5299-4ea0-8b00-1359ca7f36b3/collection/19374305-81a961ba-f6b6-4d13-914f-6f28169904da?action=share&creator=19374305&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Notification Stripe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer pk_test_51M2XOqGEjKvfQnqpoNdvO5lJhuRn2SBcA6ZPl9O0DBLHMPr48QDVtibYxoUKjVdQgDzdpzexnQchRsRgagSxv3Kr00sUsvlehD"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "card[number]",
+							"value": "5555558265554449",
+							"description": "4000002760003184"
+						},
+						{
+							"key": "card[exp_month]",
+							"value": "11",
+							"description": "5555558265554449"
+						},
+						{
+							"key": "card[exp_year]",
+							"value": "2023"
+						},
+						{
+							"key": "card[cvc]",
+							"value": "314"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.stripe.com/v1/tokens",
+					"protocol": "https",
+					"host": [
+						"api",
+						"stripe",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
